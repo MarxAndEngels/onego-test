@@ -1,0 +1,124 @@
+$xx-large: 1248px;
+$xx-large-display: 1400px;
+
+$x-large: 1140px;
+$x-large-display:1200px;
+
+$large: 960px;
+$large-display: 992px;
+
+$medium: 720px;
+$medium-display: 768px;
+
+$small: 540px;
+$small-display: 576px;
+
+$extra-small: 100%;
+$extra-small-display:576px;
+
+$box-shadow: 0 1px 45px -12px rgb(0 0 0 / 40%);
+$border-radius: 5px;
+
+$mainColor: #034432;
+$mainColorHover: #245d4d;
+// $green: #42c004;
+$green: #43d19c;
+$greenHover: #759963;
+$black:#1e1e1e;
+$grey: #e7e7e7;
+$darkGrey: #818181;
+$lightGrey: #f4f4f4;
+$backgroundGrey: #f4f4f4;
+$lightGreyHover: #e5e5e5;
+$white: rgb(255, 255, 255);
+$error: rgba(255, 0, 0, 0.5);
+$lightText: #7c8385;
+
+.fade-enter-active, .fade-leave-active {
+  transition: .32s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  @media screen and (max-width:$large-display){
+    top: 0;
+  }
+}
+
+.button{
+  background: $mainColor;
+  color: #fff;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .24s;
+  span{
+    margin-left: 8px;
+  }
+  &.disabled{
+    background: $grey;
+    pointer-events: none;
+  }
+  &:hover{
+    background: $mainColorHover;
+  }
+  &.opacity{
+    background: none;
+    color: $mainColor;
+    border: 2px solid $mainColor;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      color: $black;
+      
+    }
+  }
+}
+
+.title-light{
+  color: $lightText;
+}
+
+.space-content-lg{
+  margin-bottom: 30px;
+}
+.space-content-x-lg{
+  margin-bottom: 50px;
+}
+
+
+.button .flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 8px;
+  transform: skewX(-45deg); 
+  animation: flareAnimation;
+  left: -150%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  animation: flareAnimation 3s infinite linear; 
+}
+@keyframes flareAnimation {
+  0% {
+      left: -150%;
+  }
+  100% {
+      left: 150%;
+  }
+}
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}

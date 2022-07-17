@@ -1,0 +1,68 @@
+query offerFilters(
+  $site_id: Int!,
+  $mark_id: Int,
+  $folder_id: Int,
+  $generation_slug: String,
+  $gearbox_id: Int,
+  $body_type_id: Int,
+  $drive_type_id: Int,
+  $owner_id: Int,
+  $year_from: Int,
+  $year_to: Int
+) {
+  offerFilters(
+    site_id:$site_id,
+    mark_id:$mark_id,
+    folder_id:$folder_id,
+    generation_slug:$generation_slug,
+    gearbox_id: $gearbox_id,
+    body_type_id: $body_type_id,
+    drive_type_id: $drive_type_id,
+    owner_id: $owner_id,
+    year_from: $year_from,
+    year_to: $year_to
+  )
+  {
+    mark{
+      title
+      id
+      slug
+    }
+    folder{
+      title
+      id
+      slug
+    }
+    generation{
+      title
+      id
+      slug
+    }
+    bodyType{
+      title
+      id
+      slug
+    }
+    engineType{
+      title
+      id
+      slug
+    }
+    driveType{
+      title
+      id
+      slug
+    }
+    owner{
+      title
+      id
+      slug
+    }
+    gearbox{
+      title
+      id
+      slug
+    }
+    year
+  }
+}

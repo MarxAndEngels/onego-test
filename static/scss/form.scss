@@ -1,0 +1,94 @@
+.form{
+  margin-top: 16px;
+}
+.input_title{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.item_title{
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 24px;
+}
+.credit_info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_color{
+  font-size: 24px;
+  font-weight: bold;
+  color: $mainColor;
+  margin-top: 8px;
+}
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width:$large-display){
+    flex-direction: column;
+  }
+}
+.input_wrapper{
+  width: calc(50% - 8px);
+  position: relative;
+  &.long{
+    width: 100%;
+  }
+  @media screen and (max-width:$large-display){
+    width: 100%;
+  }
+}
+.button{
+  margin: 16px auto;
+  max-width: 320px;
+  justify-content: center;
+}
+.input{
+  border: none;
+  border-radius: 5px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 0;
+  padding: 0 16px;
+  background: #f3f3f3;
+  transition: outline .48s;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: 'Helvetica';
+  outline: 1px solid rgba(255,255,255,0);
+  color: $black;
+  // transition: outline 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &::placeholder{
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Helvetica';
+  }
+  &:hover{
+    background: $white;
+    border-bottom: 3px solid $mainColor ;
+    border-radius: 0px;
+  }
+  &:focus{
+    background: $white;
+    border-bottom: 3px solid $mainColor ;
+    border-radius: 0px;
+  }
+}
+.input_error{
+  outline: 3px solid $error;
+}
+.select{
+  margin-bottom: 16px;
+}
+.input[readonly]{
+  background: $backgroundGrey;
+  cursor: auto;
+  &:hover{
+    outline: none;
+  }
+  &:focus{
+    outline: none;
+  }
+}

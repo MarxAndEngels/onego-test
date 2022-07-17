@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /?
+Disallow: /thanks
+Sitemap: https://car-win.ru/sitemap.xml
+
+User-agent: Yandex
+Disallow: /?
+Disallow: /thanks
+Host: https://car-win.ru/
+Sitemap: https://car-win.ru/sitemap.xml
+
+User-agent: Googlebot
+Disallow: /?
+Disallow: /thanks
+Sitemap: https://car-win.ru/sitemap.xml

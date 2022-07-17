@@ -1,0 +1,42 @@
+.fade-enter-active, .fade-leave-active {
+  transition: 0.32s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+@media screen and (max-width: 992px) {
+  .fade-enter, .fade-leave-to {
+    top: 0;
+  }
+}
+
+.button {
+  background: #e30613;
+  color: #fff;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.24s;
+}
+.button span {
+  margin-left: 8px;
+}
+.button.disabled {
+  background: #e7e7e7;
+  pointer-events: none;
+}
+.button:hover {
+  background: #7e040c;
+}
+.button.opacity {
+  background: none;
+  color: #e30613;
+  border: 2px solid #e30613;
+}
+
+/*# sourceMappingURL=variables.css.map */
